@@ -6,7 +6,7 @@ Author: Bryan J Swift
 Author URI: http://bryanjswift.com
 Version: 0.01
  
-Bryan Wordpress Theme
+Bryan's Wordpress Theme
 Copyright (C) 2008  Bryan J Swift
 
 This program is free software: you can redistribute it and/or modify
@@ -24,9 +24,32 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  
 */
 
-/* Styles Reset */
+/* Styles Reset and General Fonts */
 * { margin: 0; padding: 0; border: 0; }
 html { font-size: 16px; }
-body { font-size: 1em; font-family: Helvetica, Verdana, Arial, sans-serif; }
-ol, ul, li { list-style: none; }
-h1, h2, h3, h4, h5 { font-family: Georgia, "Times New Roman", Times, serif; }
+body { font-size: 1em; font-family: Helvetica, Verdana, Arial, sans-serif; line-height: 1.2em; }
+h1, h2, h3, h4, h5 { font-family: Georgia, "Times New Roman", Times, serif; clear: both; }
+ul, li { list-style: none; }
+/* General Font Sizing and Element Styles */
+h1 { font-size: 2em; line-height: 1.2em; }
+h2 { font-size: 1.5em; line-height: 1.2em; }
+h3, h4 { font-size: 1.3em; line-height: 1.2em; }
+h5 { font-size: 1.1em; line-height: 1.2em; }
+p { margin: 0.5em 0; }
+code { font-size: 0.9em; display: block; margin: 0.3em auto; padding: 0.5em; width: 85%; }
+ol { list-style-type: decimal-leading-zero; }
+/* Main Layout Pieces */
+div.header { padding: 0 15px; }
+div.posts { padding: 0 15px; float: left; width: 75%; overflow: auto; }
+div.sidebar { width: 20%; padding: 0 15px 0 0; float: right; overflow: auto; }
+div.footer { clear: both; padding: 0 0.7em; text-align: center; }
+/* Wordpress Generated Classes */
+.alignleft { float: left; padding: 0.5em 0.5em 0.5em 0; }
+.aligncenter { display: block; margin: auto; padding: 0.5em 0; }
+.alignright { float: right; padding: 0.5em 0 0.5em 0.5em; }
+/* Post Content Styles */
+.post { padding: 7px; position: relative; }
+* html .post { height: 1%; } /* --- CSS HACK --- Added so IE will contain all floated content (auto-clearing effect) */
+.post:after { content: "."; display: block; visibility: hidden; height: 0px; overflow: hidden; clear: both; }
+.post .content p { text-indent: 0.7em; margin-left: 10px; margin-right: 10px; }
+.post .feedback { float: right; }
