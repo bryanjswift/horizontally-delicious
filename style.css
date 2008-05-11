@@ -48,6 +48,7 @@ div.footer { clear: both; padding: 0 15px; text-align: center; }
 .aligncenter { display: block; margin: auto; padding: 0.5em 0; }
 .alignright { float: right; padding: 0.5em 0 0.5em 0.5em; }
 /* Post Content Styles */
+.navigation { min-height: 1em; }
 .post { padding: 7px; position: relative; }
 * html .post { height: 1%; } /* --- CSS HACK --- Added so IE will contain all floated content (auto-clearing effect) */
 .post:after { content: "."; display: block; visibility: hidden; height: 0px; overflow: hidden; clear: both; }
