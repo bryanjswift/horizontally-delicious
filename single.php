@@ -15,8 +15,7 @@
 					<?php the_content(); ?>
 				</div>
 				<div class="feedback">
-					<?php wp_link_pages(); ?>
-					<?php comments_popup_link(__('No Reaction'), __('One Reaction'), __('% Reactions')); ?>
+					<?php comments_template(); ?>
 				</div>
 				<?php posts_nav_link(' &#8212; ', __('&laquo; Previous Page'), __('Next Page &raquo;')); ?>
 			</div> <!-- end of div.post -->
