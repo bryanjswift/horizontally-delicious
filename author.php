@@ -8,7 +8,7 @@
 				$currentAuthor = get_userdata(intval($author));
 			endif;
 		?>
-		<h1 class="postsHeader"><?php _e('Everything written by: '); echo $currentAuthor->display_name; ?></h1>
+		<h1 class="postsHeader"><?php _e('Everything written by "'); echo $currentAuthor->display_name; _e('":'); ?></h1>
 		<div class="aboutAuthor">
 			<p class="memberSince"><?php echo $currentAuthor->user_registered; ?></p>
 			<p class="description"><?php echo $currentAuthor->description; ?>
