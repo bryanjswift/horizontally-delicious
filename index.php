@@ -20,7 +20,7 @@
 					</span>
 					<?php edit_post_link(__(' edit')); ?>
 				</p>
-				<p class="categories"><?php _e('related to'); the_category(' &bull; '); ?></p>
+				<p class="categories"><?php _e('related to '); the_category(' &bull; '); ?></p>
 				<div class="content">
 					<?php the_content("Read the rest &raquo;"); ?>
 				</div>

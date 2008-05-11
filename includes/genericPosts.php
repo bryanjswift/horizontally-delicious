@@ -13,7 +13,7 @@
 				<?php the_author_posts_link(); /* Only use the author or the author posts link not both the_author(); */ ?>
 			</span> at <span class="time"><?php the_time() ?> <?php edit_post_link(__('edit')); ?>
 		</p>
-		<p class="categories"><?php _e('related to'); the_category(' &bull; '); ?></p>
+		<p class="categories"><?php _e('related to '); the_category(' &bull; '); ?></p>
 		<div class="content">
 			<?php the_content("Read the rest &raquo;"); ?>
 		</div>
