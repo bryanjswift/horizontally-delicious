@@ -2,7 +2,8 @@
 <div id="content" class="posts">
 	<?php if (have_posts()) : ?> <!-- if there are posts then loop over them -->
 		<h1 class="postsHeader">
-			<?php _e('Posts from: '); 
+			<?php
+				_e('Posts from "'); 
 				if (is_day()) { /* If this is a daily archive */
 					the_time('F jS, Y');
 				} elseif (is_month()) { /* If this is a monthly archive */
@@ -10,6 +11,7 @@
 				} elseif (is_year()) { /* If this is a yearly archive */
 					the_time('Y');
 				}
+				_e('":');
 			?>
 		</h1>
 		<?php require_once('includes/genericPosts.php'); ?>
