@@ -13,16 +13,19 @@
 				</h2>
 				<p class="byline">
 					by <span class="author">
-						<?php the_author_posts_link(); /* Only use the author or the author posts link not both the_author(); */ ?>
+						<?php the_author_posts_link(); /* Only use the author or the author posts link not both - the_author(); */ ?>
 					</span>
 					at <span class="time">
 						<?php the_time() ?>
 					</span>
 					<?php edit_post_link(__(' edit')); ?>
 				</p>
-				<p class="categories"><?php _e('related to '); the_category(' &bull; '); ?></p>
+				<p class="related">
+					<span class="categories"><?php _e('categorized as '); the_category(' &bull; '); ?></span>
+					<?php the_tags(__(' &#8212; <span class="tags">tagged as '),' &bull; ','</span>'); ?>
+				</p>
 				<div class="content">
-					<?php the_content("Read the rest &raquo;"); ?>
+					<?php the_content("Catch the rest &raquo;"); ?>
 				</div>
 				<div class="feedback">
 					<?php wp_link_pages(); ?>
