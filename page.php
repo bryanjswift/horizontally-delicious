@@ -2,13 +2,15 @@
 <div id="content" class="posts singlePage">
 	<?php if (have_posts()) : ?> <!-- if there are posts then loop over them, should only be one post -->
 		<?php while (have_posts()) : the_post(); ?>
-			<div class="post" id="post-<?php the_ID(); ?>">
-				<h2 class="title"><?php the_title(); ?></h2>
-				<p class="byline">
-					by <span class="author">
-						<?php the_author_posts_link(); /* Only use the author or the author posts link not both - the_author(); */ ?>
-					</span> at <span class="time"><?php the_time() ?>
-				</p>
+			<div class="page post" id="post-<?php the_ID(); ?>">
+				<div class="meta">
+					<h2 class="title"><?php the_title(); ?></h2>
+					<p class="byline">
+						by <span class="author">
+							<?php the_author_posts_link(); /* Only use the author or the author posts link not both - the_author(); */ ?>
+						</span> at <span class="time"><?php the_time() ?>
+					</p>
+				</div>
 				<div class="content">
 					<?php the_content(); ?>
 				</div>
