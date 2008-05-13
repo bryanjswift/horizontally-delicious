@@ -7,10 +7,13 @@
 				<h2 class="title"><?php the_title(); ?></h2>
 				<p class="byline">
 					by <span class="author">
-						<?php the_author_posts_link(); /* Only use the author or the author posts link not both the_author(); */ ?>
+						<?php the_author_posts_link(); /* Only use the author or the author posts link not both - the_author(); */ ?>
 					</span> at <span class="time"><?php the_time() ?>
 				</p>
-				<p class="categories"><?php _e('related to '); the_category(' &bull; '); ?></p>
+				<p class="related">
+					<span class="categories"><?php _e('categorized as '); the_category(' &bull; '); ?></span>
+					<?php the_tags(__(' &#8212; <span class="tags">tagged as '),' &bull; ','</span>'); ?>
+				</p>
 				<div class="content">
 					<?php the_content(); ?>
 				</div>

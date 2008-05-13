@@ -6,7 +6,7 @@
 				<h2 class="title"><?php the_title(); ?></h2>
 				<p class="byline">
 					by <span class="author">
-						<?php the_author_posts_link(); /* Only use the author or the author posts link not both the_author(); */ ?>
+						<?php the_author_posts_link(); /* Only use the author or the author posts link not both - the_author(); */ ?>
 					</span> at <span class="time"><?php the_time() ?>
 				</p>
 				<div class="content">
