@@ -40,9 +40,9 @@ code { font-size: 0.9em; display: block; margin: 0.3em auto; padding: 0.5em; wid
 ol { list-style-type: decimal-leading-zero; }
 /* Main Layout Pieces */
 div.header { padding: 0 15px; }
-div.posts { padding: 0 15px; float: left; width: 75%; overflow: auto; }
+div.posts { width: 75%; padding: 0 15px; float: left; overflow: auto; }
 div.sidebar { width: 20%; padding: 0 15px 0 0; float: right; overflow: auto; }
-div.footer { clear: both; padding: 0 15px; text-align: center; }
+div.footer { clear: left; padding: 0 15px; text-align: center; }
 /* Wordpress Generated Classes */
 .alignleft { float: left; padding: 0.5em 0.5em 0.5em 0; }
 .aligncenter { display: block; margin: auto; padding: 0.5em 0; }
