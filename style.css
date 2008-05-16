@@ -27,7 +27,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* Styles Reset and General Fonts */
 * { margin: 0; padding: 0; border: 0; }
 html { font-size: 16px; }
-body { font-size: 1em; font-family: Helvetica, Verdana, Arial, sans-serif; line-height: 1.2em; }
+body { font-size: 1em; font-family: Palatino, Tahoma, Verdana, Arial, sans-serif; line-height: 1.2em; }
 h1, h2, h3, h4, h5 { font-family: Georgia, "Times New Roman", Times, serif; clear: both; }
 ul, li { list-style: none; }
 /* General Font Sizing and Element Styles */
@@ -40,6 +40,7 @@ code { font-size: 0.9em; font-family: Courier, serif; display: block; margin: 0.
 pre { font-family: Courier, serif; }
 ol { list-style-type: decimal-leading-zero; padding: 0 0 0 30px; }
 ol li { list-style-type: decimal-leading-zero; padding: 0; }
+input, textarea { border: 1px solid black; }
 /* Main Layout Pieces */
 div.wrap { width: 85%; margin: 0 auto; }
 div.header {  }
