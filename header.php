@@ -3,6 +3,9 @@
 	<head>
 		<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 		<meta name="generator" content="WordPress <?php bloginfo('version'); ?>" /> <!-- leave this for stats please -->
+		<?php if (is_home() || is_archive()) : ?>
+			<meta name="robots" content="noindex,nocache,follow" />
+		<?php endif; ?>
 		<title><?php bloginfo('name'); ?><?php wp_title(); ?></title>
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" media="screen" />
 		<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php bloginfo('rss2_url'); ?>" />
