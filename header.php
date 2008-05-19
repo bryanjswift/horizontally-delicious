@@ -21,7 +21,7 @@
 			$wpPages = wp_list_pages('title_li=0&echo=0&sort_column=post_date');
 		?>
 		<div class="wrap"> <!-- ends in footer.php -->
-			<div class="header">
+			<div id="header">
 				<h1 class="title"><a href="<?php bloginfo('url'); ?>/"><?php bloginfo('name'); ?></a></h1>
 				<p class="description"><?php bloginfo('description'); ?></p>
 				<!--

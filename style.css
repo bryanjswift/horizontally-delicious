@@ -1,7 +1,7 @@
 /*
 Theme Name: Bryan
 Theme URI: http://bryanjswift.com
-Description: My first wordpress theme, experimental.
+Description: My first wordpress theme, experimental inspired by DePo Clean and DePo Skinny created by <a href="http://powazek.com/">Derek Powazek</a>
 Author: Bryan J Swift
 Author URI: http://bryanjswift.com
 Version: 0.01
@@ -42,22 +42,32 @@ ol { list-style-type: decimal-leading-zero; padding: 0 0 0 30px; }
 ol li { list-style-type: decimal-leading-zero; padding: 0; }
 input, textarea { border: 1px solid black; }
 /* Main Layout Pieces */
-div.wrap { width: 85%; margin: 0 auto; }
-div.header {  }
-div.posts { padding: 0 15px 0 0; }
+div.wrap { width: 93%; margin: 0 auto; }
+div#header {  }
+div.posts { padding: 0; }
 div.sidebar {  }
-div.footer { clear: left; text-align: center; }
+div#footer { clear: left; text-align: center; }
 /* Wordpress Generated Classes */
 .alignleft { float: left; padding: 0.5em 0.5em 0.5em 0; }
 .aligncenter { display: block; margin: auto; padding: 0.5em 0; }
 .alignright { float: right; padding: 0.5em 0 0.5em 0.5em; }
-/* Post Content Styles */
+/* Common Post Content Styles */
 .navigation { min-height: 1em; }
 .post { padding: 7px 0 7px 7px; position: relative; }
 * html .post { height: 1%; } /* --- CSS HACK --- Added so IE will contain all floated content (auto-clearing effect) */
 .post:after { content: "."; display: block; visibility: hidden; height: 0px; overflow: hidden; clear: both; }
+.post .title { padding-bottom: 5px; border-bottom: 3px solid; }
+.post .meta { margin-top: 5px; padding-left: 10px; border-left: 1px dotted; float: right; width: 25%; }
+.post .content { float: left; width: 70%; }
 .post .content p {  }
-.post .feedback { float: right; }
+.post .feedback {  }
+/* Single Post Content Styles */
+.singlePost .post .feedback { clear: left; float: none; width: 70%; }
+/* Comment Styles */
+#commentform .text { width: 60%; }
+#commentform .text input { width: 60%; }
+#commentform label { float: right; }
+#commentform textarea { width: 100%; }
 /* Sidebar Styles */
 div.sidebar ul.widgets li { float: left; width: 20%; }
 div.sidebar ul.widgets ul li { float: none; width: auto; }
