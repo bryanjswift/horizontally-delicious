@@ -27,7 +27,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* Styles Reset and General Fonts */
 * { margin: 0; padding: 0; border: 0; }
 html { font-size: 16px; }
-body { font-size: 1em; font-family: Palatino, Tahoma, Verdana, Arial, sans-serif; line-height: 1.2em; }
+body { font-size: 1em; font-family: Palatino, Tahoma, Verdana, Arial, sans-serif; line-height: 1.2em; color: #111; }
 h1, h2, h3, h4, h5 { font-family: Georgia, "Times New Roman", Times, serif; clear: both; }
 ul, li { list-style: none; }
 /* General Font Sizing and Element Styles */
@@ -35,29 +35,39 @@ h1 { font-size: 2em; line-height: 1.2em; }
 h2 { font-size: 1.5em; line-height: 1.2em; }
 h3, h4 { font-size: 1.3em; line-height: 1.2em; }
 h5 { font-size: 1.1em; line-height: 1.2em; }
+a { color: #111; text-decoration: none; }
+a:hover { text-decoration: underline; }
 p { margin: 0.5em 0; }
 code { font-size: 0.9em; font-family: Courier, serif; display: block; margin: 0.3em auto; padding: 0.5em; width: 85%; }
+blockquote { padding: 0 0.4em; margin: 0 0.35em; position: relative; border: solid #222; border-width: 2px 0; }
 pre { font-family: Courier, serif; }
 ol { list-style-type: decimal-leading-zero; padding: 0 0 0 30px; }
 ol li { list-style-type: decimal-leading-zero; padding: 0; }
-input, textarea { border: 1px solid black; }
+input, textarea { border: 1px solid #111; }
 /* Main Layout Pieces */
 div.wrap { width: 93%; margin: 0 auto; }
-div#header {  }
-div.posts { padding: 0; }
-div.sidebar {  }
-div#footer { clear: left; text-align: center; }
+#header {  }
+#body { clear: left; }
+.posts { padding: 0; }
+.sidebar { padding: 1em 0; }
+#footer { clear: left; text-align: center; }
 /* Wordpress Generated Classes */
 .alignleft { float: left; padding: 0.5em 0.5em 0.5em 0; }
 .aligncenter { display: block; margin: auto; padding: 0.5em 0; }
 .alignright { float: right; padding: 0.5em 0 0.5em 0.5em; }
+/* Header Styles */
+#header .title { float: left; padding: 0 1em 0 0; }
+#header .description { font-size: 1.2em; line-height: 1em; float: left; padding: 0.5em 0 0; margin: 0; }
+/* Body Styles */
+#body .navigation { clear: left; }
+#body .navigation:first-child { display: none; }
 /* Common Post Content Styles */
 .navigation { min-height: 1em; }
-.post { padding: 7px 0 7px 7px; position: relative; }
+.post { padding: 7px 0 7px 0; position: relative; }
 * html .post { height: 1%; } /* --- CSS HACK --- Added so IE will contain all floated content (auto-clearing effect) */
 .post:after { content: "."; display: block; visibility: hidden; height: 0px; overflow: hidden; clear: both; }
-.post .title { padding-bottom: 5px; border-bottom: 3px solid; }
-.post .meta { margin-top: 5px; padding-left: 10px; border-left: 1px dotted; float: right; width: 25%; }
+.post .title { padding-bottom: 5px; border-bottom: 3px solid #111; }
+.post .meta { margin-top: 5px; padding-left: 10px; border-left: 1px dotted #111; float: right; width: 25%; }
 .post .content { float: left; width: 70%; }
 .post .content p {  }
 .post .feedback {  }
@@ -69,5 +79,7 @@ div#footer { clear: left; text-align: center; }
 #commentform label { float: right; }
 #commentform textarea { width: 100%; }
 /* Sidebar Styles */
-div.sidebar ul.widgets li { float: left; width: 20%; }
-div.sidebar ul.widgets ul li { float: none; width: auto; }
+.sidebar .widgets:after { content: "."; height: 1%; display: block; visibility: hidden; overflow: hidden; }
+.sidebar .widgets li { float: left; width: 20%; }
+.sidebar .widgets ul:after { content: "."; height: 1%; display: block; visibility: hidden; overflow: hidden; }
+.sidebar .widgets ul li { float: none; width: auto; }

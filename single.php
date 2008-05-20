@@ -15,14 +15,14 @@
 						<p class="categories"><?php _e('categorized as '); the_category(' &bull; '); ?></p>
 						<?php the_tags(__('<p class="tags">tagged as '),' &bull; ','</p>'); ?>
 					</div>
-					<div class="feedback">
-						<?php comments_template(); ?>
-					</div>
 				</div>
 				<div class="content">
 					<?php the_content(); ?>
 				</div>
 				<?php posts_nav_link(' &#8212; ', __('&laquo; Previous Page'), __('Next Page &raquo;')); ?>
+				<div class="feedback">
+					<?php comments_template(); ?>
+				</div>
 			</div> <!-- end of div.post -->
 		<?php endwhile; ?>
 	<?php else: ?> <!-- if there are no posts display this content -->

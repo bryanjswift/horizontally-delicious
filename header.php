@@ -30,5 +30,5 @@
 				</ul>
 				-->
 			</div>
-			<div class="body"> <!-- ends in footer.php -->
+			<div id="body"> <!-- ends in footer.php -->
 				<!-- content filled in here -->

@@ -10,16 +10,15 @@
 							<?php the_author_posts_link(); /* Only use the author or the author posts link not both - the_author(); */ ?>
 						</span> at <span class="time"><?php the_time() ?>
 					</p>
-					<div class="feedback">
-						<?php wp_link_pages(); ?>
-						<?php comments_popup_link(__('No Reaction'), __('One Reaction'), __('% Reactions')); ?>
-					</div>
 				</div>
 				<div class="content">
 					<?php the_content(); ?>
 				</div>
-				
 				<?php posts_nav_link(' &#8212; ', __('&laquo; Previous Page'), __('Next Page &raquo;')); ?>
+				<div class="feedback">
+					<?php wp_link_pages(); ?>
+					<?php comments_popup_link(__('No Reaction'), __('One Reaction'), __('% Reactions')); ?>
+				</div>
 			</div> <!-- end of div.post -->
 		<?php endwhile; ?>
 	<?php else: ?> <!-- if there are no posts display this content -->
