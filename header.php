@@ -18,17 +18,18 @@
 	<body> <!-- ends in footer.php -->
 		<?php
 			$requestUri = $_SERVER['REQUEST_URI'];
-			$wpPages = wp_list_pages('title_li=0&echo=0&sort_column=post_date');
+			$wpPages = wp_list_pages('title_li=0&echo=0&sort_column=post_date&depth=1');
 		?>
-		<div class="wrap"> <!-- ends in footer.php -->
-			<div id="header">
-				<h1 class="title"><a href="<?php bloginfo('url'); ?>/"><?php bloginfo('name'); ?></a></h1>
-				<p class="description"><?php bloginfo('description'); ?></p>
-				<!--
+		<div id="header" class="wrap">
+			<h1 class="title"><a href="<?php bloginfo('url'); ?>/"><?php bloginfo('name'); ?></a></h1>
+			<p class="description"><?php bloginfo('description'); ?></p>
+			<?php if (isset($wpPages) && "" != $wpPages) : ?>
 				<ul class="pages">
-					<li class="page"><a href="<?php bloginfo('url'); ?>/" title="Homepage">Home</a></li>
+					<?php echo $wpPages; ?>
 				</ul>
-				-->
-			</div>
-			<div id="body"> <!-- ends in footer.php -->
-				<!-- content filled in here -->
+			<?php else : ?>
+				<div class="clear">&nbsp;</div>
+			<?php endif; ?>
+		</div>
+		<div id="body" class="wrap"> <!-- ends in footer.php -->
+			<!-- content filled in here -->

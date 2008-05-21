@@ -2,7 +2,6 @@
 <div class="sidebar">
 	<ul class="widgets">
 		<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar()) : /* Widgetized sidebar, if you have the plugin installed. */ ?>
-			<?php wp_list_pages('title_li=' . __('Pages:')); ?>
 			<?php wp_list_bookmarks('title_after=&title_before='); ?>
 			<li id="search">
 				<label for="s"><?php _e('Search:'); ?></label>
