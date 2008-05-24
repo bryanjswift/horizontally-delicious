@@ -1,7 +1,3 @@
-<div class="navigation">
-	<div class="previous"><?php next_posts_link(__('&laquo; Older Entries')) ?></div>
-	<div class="next"><?php previous_posts_link(__('Newer Entries &raquo;')) ?></div>
-</div>
 <?php while (have_posts()) : the_post(); ?>
 	<div class="post" id="post-<?php the_ID(); ?>">
 		<h2 class="title">

@@ -1,10 +1,10 @@
 /*
-Theme Name: Bryan
+Theme Name: Horizontally Delicious
 Theme URI: http://bryanjswift.com
-Description: My first wordpress theme, experimental inspired by DePo Clean and DePo Skinny created by <a href="http://powazek.com/">Derek Powazek</a>. Utilizes the <a href="http://kuler.adobe.com/index.cfm#themeID/22361">Neutral Blue</a> color palette by matthepworth.
+Description: My first wordpress theme, which has turned out to display quite horizontally. Inspired by DePo Clean and DePo Skinny created by <a href="http://powazek.com/">Derek Powazek</a>. Utilizes colors from the <a href="http://kuler.adobe.com/index.cfm#themeID/22361">Neutral Blue</a> color palette by matthepworth.
 Author: Bryan J Swift
 Author URI: http://bryanjswift.com
-Version: 0.01
+Version: 0.01alpha
  
 Bryan's Wordpress Theme
 Copyright (C) 2008  Bryan J Swift
@@ -21,7 +21,6 @@ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
- 
 */
 
 /* Styles Reset and General Fonts */
@@ -29,7 +28,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 html { font-size: 16px; }
 body { font-size: 1em; font-family: Palatino, Tahoma, Verdana, Arial, sans-serif; line-height: 1.2em; color: #193441; }
 h1, h2, h3, h4, h5 { font-family: Georgia, "Times New Roman", Times, serif; clear: both; }
-ul, li { list-style: none; }
+ol, ul, li { list-style: none; }
 /* General Font Sizing and Element Styles */
 h1 { font-size: 2em; line-height: 1.2em; }
 h2 { font-size: 1.5em; line-height: 1.2em; }
@@ -42,13 +41,14 @@ code { font-size: 0.9em; font-family: Courier, serif; }
 blockquote { padding: 0 0.5em; margin: 0 0.35em; position: relative; border: solid #222; border-width: 0 0 0 5px; }
 pre { font-family: Courier, serif; font-size: 0.9em; margin: 0 0.5em; }
 input, textarea { border: 1px solid #193441; }
+button { border: 1px solid #193441; background: #91AA9D; height: 1.6em; }
 /* Main Layout Pieces */
 div.wrap { padding: 0 3.5%; }
-#header { padding-top: 1em; background: #D1DBBD; }
+#header { padding-top: 1em; border-bottom: 3px solid #D1DBBD; }
 #body { clear: left; }
 .posts { padding: 0; }
-.sidebar { padding: 1em 3.5% 0; color: #193441; background: #D1DBBD; }
-#footer { clear: left; text-align: center; padding: 0 0 0.5em; background: #D1DBBD; }
+.sidebar { padding: 1em 3.5% 0; color: #193441; border-top: 3px solid #D1DBBD; }
+#footer { clear: left; text-align: center; padding: 0.7em 0 0.5em; }
 #footer p { margin: 0; }
 #footer a { color: #193441; }
 /* Wordpress Generated Classes */
@@ -62,13 +62,15 @@ div.wrap { padding: 0 3.5%; }
 #header .description { font-size: 1.2em; color: #193441; line-height: 1em; float: left; padding: 0.5em 0 0; margin: 0; }
 /* Nav Styles */
 #nav { clear: left; padding: 0.5em 0 0.7em; }
-#nav .parent { float: left; padding: 0 1em 0 0; }
+#nav .parent { float: left; padding: 0 0.5em 0 0.5em; border: solid #fff; border-width: 1px 0 0; }
+#nav .parent:hover, #nav .hovered .child { border-color: #D1DBBD; }
 #nav .parent:hover .child, #nav .hovered .child { left: auto; }
-#nav .child { position: absolute; left: -15000px; z-index: 5; background: #D1DBBD; padding: 0 0.5em; width: 10em; }
+#nav .child { position: absolute; left: -15000px; z-index: 5; background: #fff; border: 1px solid #D1DBBD; padding: 0 0.5em; width: 10em; }
 html > body #nav .child { min-width: 10em; width: auto; } /* --- CSS HACK --- Added because of IE6's lack of min-width support */
-#nav .child li { padding: 0.3em 0 0; }
-#nav .child li:last-child { padding-bottom: 0.3em; }
+#nav .child li { padding: 0.3em 0 0; border-bottom: 1px solid #CCC; }
+#nav .child li:last-child { padding-bottom: 0.3em; border-bottom-width: 0; }
 #nav .child ul { padding-left: 0.5em; }
+#nav .child ul li { border-bottom-width: 0; }
 * html #nav { height: 1%; } /* --- CSS HACK --- Added so IE will contain all floated content (auto-clearing effect) */
 #nav:after { content: "."; display: block; visibility: hidden; height: 1%; overflow: hidden; clear: both; }
 /* Body Styles */
@@ -76,16 +78,14 @@ html > body #nav .child { min-width: 10em; width: auto; } /* --- CSS HACK --- Ad
 #body .navigation:first-child { display: none; }
 /* Common Post Content Styles */
 .navigation { min-height: 1em; }
-.post { padding: 7px 0 7px 0; position: relative; }
+.post, .fourOhFour { padding: 7px 0 7px 0; position: relative; }
 * html .post { height: 1%; } /* --- CSS HACK --- Added so IE will contain all floated content (auto-clearing effect) */
 .post:after { content: "."; display: block; visibility: hidden; height: 1%; overflow: hidden; clear: both; }
 .post .title { padding-bottom: 5px; border-bottom: 3px solid #193441; }
 .post .meta { margin-top: 5px; padding-left: 10px; border-left: 1px dotted #193441; float: right; width: 25%; }
 .post .content { float: left; width: 70%; }
-.post .content p {  }
-.post .feedback {  }
-.post ol { list-style: decimal-leading-zero outside; padding: 0 0 0 30px; }
-.post ol li { list-style: decimal-leading-zero outside; padding: 0; }
+.post ol { list-style: decimal-leading-zero outside; }
+.post ol li { list-style: decimal-leading-zero outside; margin: 0 0 0 30px; }
 .post ul { list-style: square outside; padding: 0 0 0 15px; }
 .post ul li { list-style: square outside; }
 /* Single Post Content Styles */
@@ -97,10 +97,12 @@ html > body #nav .child { min-width: 10em; width: auto; } /* --- CSS HACK --- Ad
 #commentform label { float: right; }
 #commentform textarea { width: 100%; }
 /* Sidebar Styles */
-* html .sidebar .widgets { height: 1%; } /* --- CSS HACK --- Added so IE will contain all floated content (auto-clearing effect) */
-.sidebar .widgets:after { content: "."; height: 1%; display: block; visibility: hidden; overflow: hidden; clear: both; }
 .sidebar .widgets li { float: left; padding-left: 1em; clear: left; }
 .sidebar .widgets li:first-child { padding-left: 0; }
-.sidebar .widgets .widget { padding-left: 0; padding-bottom: 0.15em; }
+.sidebar .widgets .widget { padding-left: 0; padding-bottom: 0.15em; width: 100%; }
 .sidebar .widgets ul li { clear: none; width: auto; }
 .sidebar .widgets .title { font-size: 1em; float: left; padding-right: 1em; }
+/* Four Oh Four Styles */
+.fourOhFour .header { padding: 0 0 0.5em; }
+/* Search Styles */
+.s { margin-right: 0.5em; }
