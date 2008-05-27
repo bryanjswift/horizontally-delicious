@@ -28,9 +28,7 @@
 				</li>
 				<li class="parent tags">
 					<a href="<?php bloginfo('url'); ?>/tags/" title="Tags"><?php _e('Tags'); ?></a>
-					<ul class="child">
-						<?php wp_tag_cloud('unit=em&smallest=1&largest=1&format=list'); ?>
-					</ul>
+					<?php bjs_wp_tag_cloud('unit=em&smallest=1&largest=1&format=list'); ?>
 				</li>
 				<li class="parent pages">
 					<a href="<?php bloginfo('url'); ?>/pages/" title="Pages"><?php _e('Pages'); ?></a>

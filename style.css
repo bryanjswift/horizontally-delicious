@@ -61,7 +61,7 @@ div.wrap { padding: 0 3.5%; }
 #header .title a { color: #193441; }
 #header .description { font-size: 1.2em; color: #193441; line-height: 1em; float: left; padding: 0.5em 0 0; margin: 0; }
 /* Nav Styles */
-#nav { clear: left; padding: 0.5em 0 0.7em; }
+#nav { clear: left; padding: 0.5em 0 0; }
 #nav .parent { float: left; padding: 0 0.5em 0 0.5em; border: solid #fff; border-width: 1px 0 0; }
 #nav .parent:hover, #nav .hovered .child { border-color: #D1DBBD; }
 #nav .parent:hover .child, #nav .hovered .child { left: auto; }
@@ -91,6 +91,12 @@ html > body #nav .child { min-width: 10em; width: auto; } /* --- CSS HACK --- Ad
 /* Single Post Content Styles */
 .singlePost .post .feedback { clear: left; float: none; width: 70%; }
 .feedback a { color: #3E606F; }
+.feedback .author { background: #FCFFF5; }
+.feedback .avatar {  }
+ol#commentlist { list-style-position: inside; }
+ol#commentlist li { padding: 5px; margin: 0; list-style-position: inside; }
+/* Single Page Content Styles */
+.page .title { padding: 0; margin: 0 0 0.3em; }
 /* Comment Styles */
 #commentform .text { width: 60%; }
 #commentform .text input { width: 60%; }
