@@ -25,8 +25,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* Styles Reset and General Fonts */
 * { margin: 0; padding: 0; border: 0; }
-html { font-size: 16px; }
-body { font-size: 1em; font-family: Palatino, Tahoma, Verdana, Arial, sans-serif; line-height: 1.2em; color: #193441; }
+body { font-size: 16px; font-family: Palatino, Tahoma, Verdana, Arial, sans-serif; line-height: 1.2em; color: #193441; }
 h1, h2, h3, h4, h5 { font-family: Georgia, "Times New Roman", Times, serif; clear: both; }
 ol, ul, li { list-style: none; }
 /* General Font Sizing and Element Styles */
