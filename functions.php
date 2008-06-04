@@ -8,8 +8,7 @@
 			'after_title' => '</h2>',
 		));
 	}
-?>
-<?php
+
 	function bjs_widget_search($args) {
 		extract($args);
 		echo $before_widget;
@@ -19,12 +18,10 @@
 		include (TEMPLATEPATH . '/searchform.php');
 		echo $after_widget;
 	}
-?>
-<?php
+
 	$widgetOptions = array('classname' => 'widget_search', 'description' => __( "A search form for your blog"));
 	wp_register_sidebar_widget('search',__('Search'),'bjs_widget_search',$widgetOptions);
-?>
-<?php
+
 	/* Copies of wp_tag_cloud and wp_generate_tag_cloud slightly modified from wp-includes/category-template.php */
 	function bjs_wp_tag_cloud( $args = '' ) {
 		$defaults = array(
@@ -110,4 +107,7 @@
 		endswitch;
 		return apply_filters( 'wp_generate_tag_cloud', $return, $tags, $args );
 	}
+	
+	require_once(TEMPLATEPATH . '/admin/controlPanel.php');
+	$cpanel = new ControlPanel();
 ?>

@@ -27,7 +27,7 @@
 	<?php if ( $comments ) : /* iterate over the comments */ ?>
 		<ol id="commentlist" class="comments">
 			<?php foreach ($comments as $comment) : ?>
-				<li id="comment-<?php comment_ID() ?>" class="comment<?php if (2 == $comment->user_id) { echo ' author'; } ?>">
+				<li id="comment-<?php comment_ID() ?>" class="comment<?php if(!isset($themeOptions)) { $themeOptions = get_option('Horizontally Delicious'); } if ($themeOptions["owner_id"] == $comment->user_id) { echo ' author'; } ?>">
 					<?php echo get_avatar( $comment, 32 ); ?>
 					<?php comment_text() ?>
 					<p>

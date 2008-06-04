@@ -13,6 +13,7 @@
 		<link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="<?php bloginfo('atom_url'); ?>" />
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 		<?php wp_get_archives('type=monthly&format=link'); ?>
+		<?php $themeOptions = get_option('Horizontally Delicious'); ?>
 	</head>
 	<?php flush(); ?>
 	<body> <!-- ends in footer.php -->
@@ -21,23 +22,23 @@
 			<p class="description"><?php bloginfo('description'); ?></p>
 			<ul id="nav">
 				<li class="parent categories">
-					<a href="<?php bloginfo('url'); ?>/categories/" title="Categories"><?php _e('Categories'); ?></a>
+					<?php if ($themeOptions["categories_is_link"] == 1) : ?><a href="<?php bloginfo('url'); ?>/categories/" title="Categories"><?php endif; _e('Categories'); ?><?php if ($themeOptions["categories_is_link"]) : ?></a><?php endif; ?>
 					<ul class="child">
 						<?php wp_list_categories('title_li=0&show_count=1'); ?>
 					</ul>
 				</li>
 				<li class="parent tags">
-					<a href="<?php bloginfo('url'); ?>/tags/" title="Tags"><?php _e('Tags'); ?></a>
+					<?php if ($themeOptions["tags_is_link"] == 1) : ?><a href="<?php bloginfo('url'); ?>/tags/" title="Tags"><?php endif; _e('Tags'); ?><?php if ($themeOptions["tags_is_link"]) : ?></a><?php endif; ?>
 					<?php bjs_wp_tag_cloud('unit=em&smallest=1&largest=1&format=list'); ?>
 				</li>
 				<li class="parent pages">
-					<a href="<?php bloginfo('url'); ?>/pages/" title="Pages"><?php _e('Pages'); ?></a>
+					<?php if ($themeOptions["pages_is_link"] == 1) : ?><a href="<?php bloginfo('url'); ?>/pages/" title="Pages"><?php endif; _e('Pages'); ?><?php if ($themeOptions["pages_is_link"]) : ?></a><?php endif; ?>
 					<ul class="child">
 						<?php wp_list_pages('title_li=0&sort_column=post_date'); ?>
 					</ul>
 				</li>
 				<li class="parent archives">
-					<a href="<?php bloginfo('url'); ?>/archives/" title="Archives"><?php _e('Archives'); ?></a>
+					<?php if ($themeOptions["archives_is_link"] == 1) : ?><a href="<?php bloginfo('url'); ?>/archives/" title="Archives"><?php endif; _e('Archives'); ?><?php if ($themeOptions["archivesw_is_link"]) : ?></a><?php endif; ?>
 					<ul class="child">
 						<?php wp_get_archives('type=monthly&show_post_count=1'); ?>
 					</ul>
