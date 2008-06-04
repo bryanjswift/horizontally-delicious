@@ -60,7 +60,7 @@ div.wrap { padding: 0 3.5%; }
 #header .title a { color: #193441; }
 #header .description { font-size: 1.2em; color: #193441; line-height: 1em; float: left; padding: 0.5em 0 0; margin: 0; }
 /* Nav Styles */
-#nav { clear: left; padding: 0.5em 0 0; }
+#nav { clear: left; padding: 0.5em 0 0; position: relative; }
 #nav .parent { float: left; padding: 0 0.5em 0 0.5em; border: solid #fff; border-width: 1px 0 0; }
 #nav .parent:hover, #nav .hovered .child { border-color: #D1DBBD; }
 #nav .parent:hover .child, #nav .hovered .child { left: auto; }
