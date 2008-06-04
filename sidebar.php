@@ -2,24 +2,13 @@
 <div class="sidebar">
 	<ul class="widgets">
 		<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar()) : /* Widgetized sidebar, if you have the plugin installed. */ ?>
-			<?php wp_list_pages('title_li=' . __('Pages:')); ?>
-			<?php wp_list_bookmarks('title_after=&title_before='); ?>
-			<?php wp_list_categories('title_li=' . __('Categories:')); ?>
-			<li id="search">
-				<label for="s"><?php _e('Search:'); ?></label>
-				<form id="searchform" method="get" action="<?php bloginfo('home'); ?>">
-					<div>
-						<input type="text" name="s" id="s" size="15" /><br />
-						<input type="submit" value="<?php _e('Search'); ?>" />
-					</div>
-				</form>
+			<?php wp_list_bookmarks('title_li=0&class=widget&title_after=:</h2>&title_before=<h2 class="title">'); ?>
+			<li id="search" class="widget">
+				<h2 class="title"><label for="s"><?php _e('Search:'); ?></label></h2>
+				<?php include (TEMPLATEPATH . '/searchform.php'); ?>
 			</li>
-			<li id="archives"><?php _e('Archives:'); ?>
-				<ul>
-					<?php wp_get_archives('type=monthly'); ?>
-				</ul>
-			</li>
-			<li id="meta"><?php _e('Meta:'); ?>
+			<li id="meta" class="widget">
+				<h2 class="title"><?php _e('Meta:'); ?></h2>
 				<ul>
 					<?php wp_register(); ?>
 					<li><?php wp_loginout(); ?></li>

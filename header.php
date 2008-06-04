@@ -6,29 +6,44 @@
 		<?php if (is_home() || is_archive()) : ?>
 			<meta name="robots" content="noindex,nocache,follow" />
 		<?php endif; ?>
-		<title><?php bloginfo('name'); ?><?php wp_title(); ?></title>
+		<title><?php wp_title('&laquo;',true,'right'); ?><?php bloginfo('name'); ?></title>
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" media="screen" />
 		<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php bloginfo('rss2_url'); ?>" />
 		<link rel="alternate" type="text/xml" title="RSS .92" href="<?php bloginfo('rss_url'); ?>" />
 		<link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="<?php bloginfo('atom_url'); ?>" />
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 		<?php wp_get_archives('type=monthly&format=link'); ?>
+		<?php $themeOptions = get_option('Horizontally Delicious'); ?>
 	</head>
 	<?php flush(); ?>
 	<body> <!-- ends in footer.php -->
-		<?php
-			$requestUri = $_SERVER['REQUEST_URI'];
-			$wpPages = wp_list_pages('title_li=0&echo=0&sort_column=post_date');
-		?>
-		<div class="wrap"> <!-- ends in footer.php -->
-			<div class="header">
-				<h1 class="title"><a href="<?php bloginfo('url'); ?>/"><?php bloginfo('name'); ?></a></h1>
-				<p class="description"><?php bloginfo('description'); ?></p>
-				<!--
-				<ul class="pages">
-					<li class="page"><a href="<?php bloginfo('url'); ?>/" title="Homepage">Home</a></li>
-				</ul>
-				-->
-			</div>
-			<div class="body"> <!-- ends in footer.php -->
-				<!-- content filled in here -->
+		<div id="header" class="wrap">
+			<h1 class="title"><a href="<?php bloginfo('url'); ?>/"><?php bloginfo('name'); ?></a></h1>
+			<p class="description"><?php bloginfo('description'); ?></p>
+			<ul id="nav">
+				<li class="parent categories">
+					<?php if ($themeOptions["categories_is_link"] == 1) : ?><a href="<?php bloginfo('url'); ?>/categories/" title="Categories"><?php endif; _e('Categories'); ?><?php if ($themeOptions["categories_is_link"]) : ?></a><?php endif; ?>
+					<ul class="child">
+						<?php wp_list_categories('title_li=0&show_count=1'); ?>
+					</ul>
+				</li>
+				<li class="parent tags">
+					<?php if ($themeOptions["tags_is_link"] == 1) : ?><a href="<?php bloginfo('url'); ?>/tags/" title="Tags"><?php endif; _e('Tags'); ?><?php if ($themeOptions["tags_is_link"]) : ?></a><?php endif; ?>
+					<?php bjs_wp_tag_cloud('unit=em&smallest=1&largest=1&format=list'); ?>
+				</li>
+				<li class="parent pages">
+					<?php if ($themeOptions["pages_is_link"] == 1) : ?><a href="<?php bloginfo('url'); ?>/pages/" title="Pages"><?php endif; _e('Pages'); ?><?php if ($themeOptions["pages_is_link"]) : ?></a><?php endif; ?>
+					<ul class="child">
+						<?php wp_list_pages('title_li=0&sort_column=post_date'); ?>
+					</ul>
+				</li>
+				<li class="parent archives">
+					<?php if ($themeOptions["archives_is_link"] == 1) : ?><a href="<?php bloginfo('url'); ?>/archives/" title="Archives"><?php endif; _e('Archives'); ?><?php if ($themeOptions["archivesw_is_link"]) : ?></a><?php endif; ?>
+					<ul class="child">
+						<?php wp_get_archives('type=monthly&show_post_count=1'); ?>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div id="body" class="wrap"> <!-- ends in footer.php -->
+			<!-- content filled in here -->
