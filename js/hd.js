@@ -5,6 +5,6 @@ if (jq.browser.msie && jq.browser.ver === 6) {
 		jq(e.target).addClass('hovered');
 	});
 	jq('#nav li.parent').bind('mouseleave',function(e) {
-		jq(e.target).removeClasse('hovered');
+		jq(e.target).removeClass('hovered');
 	});
 }
