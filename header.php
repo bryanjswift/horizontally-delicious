@@ -29,7 +29,7 @@
 				</li>
 				<li class="parent tags">
 					<?php if ($themeOptions["tags_is_link"] == 1) : ?><a href="<?php bloginfo('url'); ?>/tags/" title="Tags"><?php endif; _e('Tags'); ?><?php if ($themeOptions["tags_is_link"]) : ?></a><?php endif; ?>
-					<?php bjs_wp_tag_cloud('unit=em&smallest=1&largest=1&format=list'); ?>
+					<?php bjs_wp_tag_cloud('unit=em&smallest=1&largest=1.01&format=list'); ?>
 				</li>
 				<li class="parent pages">
 					<?php if ($themeOptions["pages_is_link"] == 1) : ?><a href="<?php bloginfo('url'); ?>/pages/" title="Pages"><?php endif; _e('Pages'); ?><?php if ($themeOptions["pages_is_link"]) : ?></a><?php endif; ?>
