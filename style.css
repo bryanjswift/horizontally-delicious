@@ -47,7 +47,7 @@ div.wrap { padding: 0 3.5%; }
 #body { clear: left; }
 .posts { padding: 0; }
 .sidebar { padding: 1em 3.5% 0; color: #193441; border-top: 3px solid #D1DBBD; }
-#footer { clear: left; text-align: center; padding: 0.7em 0 0.5em; }
+#footer { clear: both; text-align: center; padding: 0.7em 0 0.5em; }
 #footer p { margin: 0; }
 #footer a { color: #193441; }
 /* Wordpress Generated Classes */
