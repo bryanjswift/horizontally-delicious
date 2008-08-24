@@ -9,7 +9,7 @@
 					<p class="byline">
 						by <span class="author">
 							<?php the_author_posts_link(); /* Only use the author or the author posts link not both - the_author(); */ ?>
-						</span> at <span class="time"><?php the_time() ?>
+						</span> at <span class="time"><?php the_time() ?></span>
 					</p>
 					<div class="related">
 						<p class="categories"><?php _e('categorized as '); the_category(' &bull; '); ?></p>
