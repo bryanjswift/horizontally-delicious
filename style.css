@@ -63,7 +63,8 @@ div.wrap { padding: 0 3.5%; }
 /* Nav Styles */
 #nav { clear: left; padding: 0.5em 0 0; position: relative; }
 #nav .parent { float: left; padding: 0 0.5em 0 0.5em; border: solid #fff; border-width: 1px 0 0; }
-#nav .parent:hover, #nav .hovered .child { border-color: #D1DBBD; }
+#nav .parent:hover, #nav .hovered { border-color: #D1DBBD; }
+#nav .parent:active, #nav .active { border: solid #D1DBBD; border-width: 0 0 1px; }
 #nav .parent:hover .child, #nav .hovered .child { left: auto; }
 #nav .child { position: absolute; left: -15000px; z-index: 5; background: #fff; border: 1px solid #D1DBBD; padding: 0 0.5em; width: 10em; }
 html > body #nav .child { min-width: 10em; width: auto; } /* --- CSS HACK --- Added because of IE6's lack of min-width support */
