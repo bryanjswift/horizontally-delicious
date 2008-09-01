@@ -63,12 +63,14 @@
 						<input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="22" tabindex="3" />
 					</p>
 				<?php endif; ?>
-				<p class="textarea"><textarea name="comment" id="comment" cols="75" rows="10" tabindex="4"></textarea></p>
-				<p class="submit">
-					<input name="submit" type="submit" id="submit" tabindex="5" value="<?php echo attribute_escape(__('Submit Comment')); ?>" />
-					<input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />
-				</p>
-				<?php do_action('comment_form', $post->ID); ?>
+				<fieldset>
+					<p class="textarea"><textarea name="comment" id="comment" cols="75" rows="10" tabindex="4"></textarea></p>
+					<p class="submit">
+						<input name="submit" type="submit" id="submit" tabindex="5" value="<?php echo attribute_escape(__('Submit Reaction')); ?>" />
+						<input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />
+					</p>
+					<?php do_action('comment_form', $post->ID); ?>
+				</fieldset>
 			</form>
 		<?php endif; /* If registration required and not logged in */ ?>
 	<?php else : /* Comments are closed */ ?>
