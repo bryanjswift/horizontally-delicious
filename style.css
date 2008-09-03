@@ -37,7 +37,7 @@ a { color: #3E606F; text-decoration: none; }
 a:hover { text-decoration: underline; }
 p { margin: 0.5em 0; }
 code { font-size: 0.9em; font-family: Courier, serif; }
-blockquote { padding: 0 0.5em; margin: 0 0.35em; position: relative; border: solid #222; border-width: 0 0 0 5px; }
+blockquote { padding: 0 0.5em; margin: 0 0.35em; position: relative; border: solid #222; border-width: 0 0 0 2px; }
 pre { font-family: Courier, serif; font-size: 0.9em; margin: 0 0.5em; }
 input, textarea { border: 1px solid #193441; }
 button { border: 1px solid #193441; background: #91AA9D; height: 1.6em; }
@@ -89,7 +89,7 @@ html > body #nav .child { min-width: 10em; width: auto; } /* --- CSS HACK --- Ad
 .post ol li { list-style: decimal-leading-zero outside; margin: 0 0 0 30px; }
 .post ul { list-style: square outside; padding: 0 0 0 15px; }
 .post ul li { list-style: square outside; }
-.post .footnotes, .post .footnotes li { list-style-type: decimal; font-size: 0.8em; font-style: italic; }
+.post .footnotes, .post .footnotes li { list-style-type: decimal; font-size: 0.85em; font-style: italic; }
 /* Single Post Content Styles */
 .singlePost .post .feedback { clear: left; float: none; width: 70%; }
 .feedback a { color: #3E606F; }
