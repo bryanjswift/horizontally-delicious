@@ -13,3 +13,15 @@ if (Browser.Engine.trident4) {
 		}
 	});
 }
+
+// sifr configuration
+/*
+var sifr = sIFR;
+var fontinBold = { 'src': stylesheetDirectory + '/flash/fontin-bold.swf' };
+sifr.activate(fontinBold);
+addEvent('domready',function() {
+	sifr.replace(fontinBold, {
+		'selector': 'h1'
+	});
+});
+*/

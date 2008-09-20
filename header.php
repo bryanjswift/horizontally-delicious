@@ -12,6 +12,8 @@
 		<link rel="alternate" type="text/xml" title="RSS .92" href="<?php bloginfo('rss_url'); ?>" />
 		<link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="<?php bloginfo('atom_url'); ?>" />
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/sIFR-print.css" type="text/css" media="print" />
+		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/sIFR-screen.css" type="text/css" media="screen" />
 		<?php wp_get_archives('type=monthly&format=link'); ?>
 		<?php $themeOptions = get_option('Horizontally Delicious'); ?>
 	</head>
