@@ -5,7 +5,11 @@ class ControlPanel {
 		'tags_is_link' => 1,
 		'pages_is_link' => 1,
 		'archives_is_link' => 1,
-		'owner_id' => 0
+		'owner_id' => 0,
+		'include_sifr' => 1,
+		'sifr_alternate_path' => '',
+		'hdjs_laternate_path' => '',
+		'additional_head' => ''
 	);
 
 	function ControlPanel() {
@@ -31,6 +35,10 @@ class ControlPanel {
 			$this->options["pages_is_link"] = isset($_POST['pages_is_link']) ? 1 : 0;
 			$this->options["archives_is_link"] = isset($_POST['archives_is_link']) ? 1 : 0;
 			$this->options["owner_id"] = $_POST['owner_id'];
+			$this->options["include_sifr"] = isset($_POST['include_sifr']) ? 1 : 0;
+			$this->options["sifr_alternate_path"] = $_POST['sifr_alternate_path'];
+			$this->options["hdjs_alternate_path"] = $_POST['hdjs_alternate_path'];
+			$this->options["additional_head"] = $_POST['additional_head'];
 			update_option('Horizontally Delicious', $this->options);
 			echo '<div class="updated fade" id="message"><p><strong>Settings saved</strong>.</p></div>';
 		}
@@ -52,8 +60,26 @@ class ControlPanel {
 					<tr valign="top">
 						<th scope="row">Comment Highlighting</th>
 						<td>
-								<input id="owner_id" name="owner_id" value="<?php echo $this->options["owner_id"]; ?>" size="40" class="code" /><br />
-								Your user id is: <?php global $userdata; get_currentuserinfo(); echo $userdata->ID; ?>
+							<label for="owner_id">User id of comments to highlight as the author's:</label>
+							<input id="owner_id" name="owner_id" value="<?php echo $this->options["owner_id"]; ?>" size="40" class="code" /><br />
+							Your user id is: <?php global $userdata; get_currentuserinfo(); echo $userdata->ID; ?>
+						</td>
+					</tr>
+					<tr valign="top">
+						<th scope="row">Theme Resources</th>
+						<td>
+							<label for="include_sifr"><input type="checkbox" name="include_sifr" id="include_sifr" <?php if ($this->options["include_sifr"] == 1 || !isset($this->options["include_sifr"])) echo ' checked="checked"'; ?> /> Include sIFR javascript from theme?</label><br />
+							<label for="sifr_alternate_path">Alternate sIFR path: </label>
+							<input type="text" name="sifr_alternate_path" id="sifr_alternate_path" value="<?php echo $this->options["sifr_alternate_path"]; ?>" size="65" class="code" /><br />
+							<label for="hdjs_alternate_path">Alternate path for theme javascript: </label>
+							<input type="text" name="hdjs_alternate_path" id="hdjs_alternate_path" value="<?php echo $this->options["hdjs_alternate_path"]; ?>" size="65" class="code" /><br />
+						</td>
+					</tr>
+					<tr valign="top">
+						<th scope="row">Additional Information</th>
+						<td>
+							<label for="additional_head">Additional markup to include in the &gt;head&lt; element</label><br />
+							<textarea id="additional_head" name="additional_head" cols="65" rows="10"><?php echo stripslashes($this->options["additional_head"]); ?></textarea>
 						</td>
 					</tr>
 				</table>
