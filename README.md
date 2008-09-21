@@ -1,6 +1,8 @@
-Things that should be theme options before a public 'release'.
- * Blog Owner user IDs -- line 30 in comments.php
- * Show Categories, Tags, Pages, Archives links in header (each a separate option) - line 22 - 47 in header.php
+This theme is developed for my personal use, but I have tried to keep things general enough for it to be used by anyone.
 
-Modifications to Admin Pages that should be made before a public 'release'
- * Update user list to display ID so people that want to use the theme don't have to get the information from their database
+There are a couple of theme options worth noting.
+* each of the 'tabs' across the top is a link by default the links can be turned off in the options
+* there is an option to enter the author's user id in order to determine whose comments get highlighted
+* there are some text fields to allow for certain resources to be hosted elsewhere
+
+The last is a little bit of an oddity I'll admit, the reason I did it however is so I would be able to use a combine script in order to reduce the number of requests being made.
