@@ -87,7 +87,7 @@ html > body #nav .child { min-width: 10em; width: auto; } /* --- CSS HACK --- Ad
 .post, .fourOhFour { padding: 7px 0 7px 0; position: relative; }
 * html .post { height: 1%; } /* --- CSS HACK --- Added so IE will contain all floated content (auto-clearing effect) */
 .post:after { content: "."; display: block; visibility: hidden; height: 1%; overflow: hidden; clear: both; }
-.post .title { padding-bottom: 5px; border-bottom: 3px solid #193441; }
+.post .title { padding-bottom: 5px; border-bottom: 3px solid #193441; font-size: 1.5em; }
 .post .meta { margin-top: 5px; padding-left: 10px; border-left: 1px dotted #193441; float: right; width: 25%; }
 .post .content { float: left; width: 70%; }
 .post .content a { color: #A7A37E; }

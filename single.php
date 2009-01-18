@@ -3,7 +3,7 @@
 	<?php if (have_posts()) : ?> <!-- if there are posts then loop over them, should only be one post -->
 		<?php while (have_posts()) : the_post(); ?>
 			<div class="post" id="post-<?php the_ID(); ?>">
-				<h2 class="title"><?php the_title(); ?></h2>
+				<h1 class="title"><?php the_title(); ?></h1>
 				<div class="meta">
 					<p class="date"><?php the_time('F j, Y'); ?></p>
 					<p class="byline">
