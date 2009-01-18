@@ -28,23 +28,23 @@
 			<h1 class="title"><a href="<?php bloginfo('url'); ?>/"><?php bloginfo('name'); ?></a></h1>
 			<p class="description"><?php bloginfo('description'); ?></p>
 			<ul id="nav">
-				<li class="parent categories">
+				<li class="parent hoverable categories">
 					<?php if ($themeOptions["categories_is_link"] == 1) : ?><a href="<?php bloginfo('url'); ?>/categories/" title="Categories"><?php endif; _e('Categories'); ?><?php if ($themeOptions["categories_is_link"] == 1) : ?></a><?php endif; ?>
 					<ul class="child">
 						<?php wp_list_categories('title_li=0&show_count=1&depth=-1'); ?>
 					</ul>
 				</li>
-				<li class="parent tags">
+				<li class="parent hoverable tags">
 					<?php if ($themeOptions["tags_is_link"] == 1) : ?><a href="<?php bloginfo('url'); ?>/tags/" title="Tags"><?php endif; _e('Tags'); ?><?php if ($themeOptions["tags_is_link"] == 1) : ?></a><?php endif; ?>
 					<?php bjs_wp_tag_cloud('unit=em&smallest=1&largest=1.01&format=list'); ?>
 				</li>
-				<li class="parent pages">
+				<li class="parent hoverable pages">
 					<?php if ($themeOptions["pages_is_link"] == 1) : ?><a href="<?php bloginfo('url'); ?>/pages/" title="Pages"><?php endif; _e('Pages'); ?><?php if ($themeOptions["pages_is_link"] == 1) : ?></a><?php endif; ?>
 					<ul class="child">
 						<?php wp_list_pages('title_li=0&sort_column=post_date'); ?>
 					</ul>
 				</li>
-				<li class="parent archives">
+				<li class="parent hoverable archives">
 					<?php if ($themeOptions["archives_is_link"] == 1) : ?><a href="<?php bloginfo('url'); ?>/archives/" title="Archives"><?php endif; _e('Archives'); ?><?php if ($themeOptions["archives_is_link"] == 1) : ?></a><?php endif; ?>
 					<ul class="child">
 						<?php wp_get_archives('type=monthly&show_post_count=1'); ?>

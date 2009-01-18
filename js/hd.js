@@ -1,5 +1,5 @@
 if (Browser.Engine.trident4) {
-	$$('#nav li.parent').addEvents({
+	$$('.hoverable').addEvents({
 		'mouseenter': function(e) {
 			this.addClass('hovered');
 		},
