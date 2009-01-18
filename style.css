@@ -33,6 +33,7 @@ h1 { font-size: 2em; }
 h2 { font-size: 1.5em; }
 h3, h4 { font-size: 1.3em; }
 h5 { font-size: 1.1em; }
+h6 { font-size: 1em; }
 a { color: #3E606F; text-decoration: none; }
 a:hover { text-decoration: underline; }
 p { display: inline-block; margin: 0.5em 0; } /* clear after p tags in case images are floated in it */
