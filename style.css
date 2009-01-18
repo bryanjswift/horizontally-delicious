@@ -25,8 +25,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* Styles Reset and General Fonts */
 * { margin: 0; padding: 0; border: 0; }
-body { font-size: 16px; font-family: Palatino, Tahoma, Verdana, Arial, sans-serif; line-height: 1.3; color: #193441; }
-h1, h2, h3, h4, h5 { font-family: Georgia, "Times New Roman", Times, serif; clear: both; }
+body { background: #fff; font-size: 16px; font-family: Palatino, Tahoma, Verdana, Arial, sans-serif; line-height: 1.3; color: #193441; }
+h1, h2, h3, h4, h5 { margin: 0.25em 0; font-family: Georgia, "Times New Roman", Times, serif; clear: both; }
 ol, ul, li { list-style: none; }
 /* General Font Sizing and Element Styles */
 h1 { font-size: 2em; }
@@ -35,7 +35,10 @@ h3, h4 { font-size: 1.3em; }
 h5 { font-size: 1.1em; }
 a { color: #3E606F; text-decoration: none; }
 a:hover { text-decoration: underline; }
-p { margin: 0.5em 0; }
+p { display: inline-block; margin: 0.5em 0; } /* clear after p tags in case images are floated in it */
+p:after { content: '.'; display: block; height: 0px; visibility: hidden; overflow: hidden; clear: both; }
+* html p { height: 1%; }
+p { display: block; } /* end clear after p tags */
 sup { line-height: 0; }
 code { font-size: 0.9em; font-family: Courier, serif; }
 blockquote { padding: 0.5em; margin: 0 0.35em; position: relative; background: #eee url(img/quote.png) 9px 5px no-repeat; text-indent: 36px; }
@@ -59,7 +62,7 @@ div.wrap { padding: 0 3.5%; }
 .clear { clear: both; }
 .fwnormal { font-weight: normal; }
 /* Header Styles */
-#header .title { float: left; padding: 0 1em 0 0; }
+#header .title { float: left; margin: 0; padding: 0 1em 0 0; }
 #header .title a { color: #193441; }
 #header .description { font-size: 1.2em; color: #193441; line-height: 1em; float: left; padding: 0.5em 0 0; margin: 0; }
 /* Nav Styles */
@@ -87,6 +90,7 @@ html > body #nav .child { min-width: 10em; width: auto; } /* --- CSS HACK --- Ad
 .post .title { padding-bottom: 5px; border-bottom: 3px solid #193441; }
 .post .meta { margin-top: 5px; padding-left: 10px; border-left: 1px dotted #193441; float: right; width: 25%; }
 .post .content { float: left; width: 70%; }
+.post .content a { color: #A7A37E; }
 .post ol { list-style: decimal-leading-zero outside; }
 .post ol li { list-style: decimal-leading-zero outside; margin: 0 0 0 30px; }
 .post ul { list-style: square outside; padding: 0 0 0 15px; }
