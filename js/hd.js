@@ -10,8 +10,7 @@ if (Browser.Engine.trident4) {
 }
 
 // sifr configuration
-var fertigo = { 'src': stylesheetDirectory + '/flash/fertigo.swf' };
-var fontinBold = { 'src': stylesheetDirectory + '/flash/fontin-bold.swf' };
+var fertigo = { 'src': stylesheetDirectory + '/flash/fertigo.swf' }; // need to provide one example
 if (typeof sIFR !== "undefined") {
 	sIFR.useDomLoaded = false;
 	sIFR.activate(fertigo, fontinBold);
