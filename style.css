@@ -91,7 +91,7 @@ html > body #nav .child { min-width: 10em; width: auto; } /* --- CSS HACK --- Ad
 .post .title { padding-bottom: 5px; border-bottom: 3px solid #193441; font-size: 1.5em; }
 .post .meta { margin-top: 5px; padding-left: 10px; border-left: 1px dotted #193441; float: right; width: 25%; }
 .post .content { float: left; width: 70%; }
-.post .content a { color: #A7A37E; }
+.post .content a { color: #9c9977; }
 .post ol { list-style: decimal-leading-zero outside; }
 .post ol li { list-style: decimal-leading-zero outside; margin: 0 0 0 30px; }
 .post ul { list-style: square outside; padding: 0 0 0 15px; }
