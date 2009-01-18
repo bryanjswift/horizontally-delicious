@@ -50,18 +50,20 @@
 				<?php if ( $user_ID ) : ?>
 					<p><?php printf(__('Logged in as %s.'), '<a href="'.get_option('siteurl').'/wp-admin/profile.php">'.$user_identity.'</a>'); ?> <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?action=logout" title="<?php _e('Log out') ?>"><?php _e('log out'); ?></a></p>
 				<?php else : ?>
-					<p class="text">
-						<label for="author"><small><?php _e('Name'); ?> <?php if ($req) _e('(required)'); ?></small></label>
-						<input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" size="22" tabindex="1" />
-					</p>
-					<p class="text">
-						<label for="email"><small><?php _e('Mail'); ?> <?php if ($req) _e('(required)'); ?></small></label>
-						<input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" />
-					</p>
-					<p class="text">
-						<label for="url"><small><?php _e('Website'); ?></small></label>
-						<input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="22" tabindex="3" />
-					</p>
+					<fieldset>
+						<p class="text">
+							<label for="author"><small><?php _e('Name'); ?> <?php if ($req) _e('(required)'); ?></small></label>
+							<input type="text" name="author" id="author" value="<?php echo $comment_author; ?>" size="22" tabindex="1" />
+						</p>
+						<p class="text">
+							<label for="email"><small><?php _e('Mail'); ?> <?php if ($req) _e('(required)'); ?></small></label>
+							<input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="22" tabindex="2" />
+						</p>
+						<p class="text">
+							<label for="url"><small><?php _e('Website'); ?></small></label>
+							<input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="22" tabindex="3" />
+						</p>
+					</fieldset>
 				<?php endif; ?>
 				<fieldset>
 					<p class="textarea"><textarea name="comment" id="comment" cols="75" rows="10" tabindex="4"></textarea></p>
