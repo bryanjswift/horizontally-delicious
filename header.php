@@ -31,7 +31,7 @@
 				<li class="parent hoverable categories">
 					<?php if ($themeOptions["categories_is_link"] == 1) : ?><a href="<?php bloginfo('url'); ?>/categories/" title="Categories"><?php endif; _e('Categories'); ?><?php if ($themeOptions["categories_is_link"] == 1) : ?></a><?php endif; ?>
 					<ul class="child">
-						<?php wp_list_categories('title_li=0&show_count=1&depth=-1'); ?>
+						<?php wp_list_categories('title_li=0&show_count=1'); ?>
 					</ul>
 				</li>
 				<li class="parent hoverable tags">
