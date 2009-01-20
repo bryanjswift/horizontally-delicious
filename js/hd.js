@@ -10,8 +10,8 @@ if (Browser.Engine.trident4) {
 }
 
 // sifr configuration
-var fertigo = { 'src': stylesheetDirectory + '/flash/fertigo.swf' }; // need to provide one example
+var myriadPro = { 'src': stylesheetDirectory + '/flash/myriad-pro.swf' };
 if (typeof sIFR !== "undefined") {
 	sIFR.useDomLoaded = false;
-	sIFR.activate(fertigo, fontinBold);
+	sIFR.activate(myriadPro);
 }
