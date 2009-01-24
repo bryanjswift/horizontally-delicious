@@ -1,5 +1,5 @@
 <?php while (have_posts()) : the_post(); ?>
-	<div class="post" id="post-<?php the_ID(); ?>">
+	<div id="post-<?php the_ID(); ?>" class="post clearfix">
 		<h2 class="title">
 			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"><?php the_title(); ?></a>
 		</h2>

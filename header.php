@@ -27,7 +27,7 @@
 		<div id="header" class="wrap">
 			<h1 class="title"><a href="<?php bloginfo('url'); ?>/"><?php bloginfo('name'); ?></a></h1>
 			<p class="description"><?php bloginfo('description'); ?></p>
-			<ul id="nav">
+			<ul id="nav" class="clearfix">
 				<li class="parent hoverable categories">
 					<?php if ($themeOptions["categories_is_link"] == 1) : ?><a href="<?php bloginfo('url'); ?>/categories/" title="Categories"><?php endif; _e('Categories'); ?><?php if ($themeOptions["categories_is_link"] == 1) : ?></a><?php endif; ?>
 					<ul class="child">

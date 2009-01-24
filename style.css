@@ -46,6 +46,10 @@ blockquote p:first-line { font-variant: small-caps; }
 pre { font-family: Courier, serif; font-size: 0.9em; margin: 0 0.5em; }
 input, textarea { padding: 0.2em 0 0.2em 0.2em; border: 1px solid #193441; }
 button { border: 1px solid #193441; background: #a1beb1; }
+.clearfix { display: inline-block; }
+* html .clearfix { height: 1%; }
+.clearfix { display: block; } /* have to reset to block for IE7 clearfix and so FF3 doesn't actually use inline-block */
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; } 
 /* Main Layout Pieces */
 div.wrap { padding: 0 3.5%; }
 #header { padding-top: 1em; border-bottom: 3px solid #D1DBBD; }
@@ -77,16 +81,12 @@ html > body #nav .child { min-width: 10em; width: auto; } /* --- CSS HACK --- Ad
 #nav .child li:last-child { border-bottom-width: 0; }
 #nav .child ul { padding-left: 0.5em; }
 #nav .child ul li { border-bottom-width: 0; }
-* html #nav { height: 1%; } /* --- CSS HACK --- Added so IE will contain all floated content (auto-clearing effect) */
-#nav:after { content: "."; display: block; visibility: hidden; height: 1%; overflow: hidden; clear: both; }
 /* Body Styles */
 #body .navigation { clear: left; }
 #body .navigation:first-child { display: none; }
 /* Common Post Content Styles */
 .navigation { min-height: 1em; }
 .post, .fourOhFour { padding: 7px 0 7px 0; position: relative; }
-* html .post { height: 1%; } /* --- CSS HACK --- Added so IE will contain all floated content (auto-clearing effect) */
-.post:after { content: "."; display: block; visibility: hidden; height: 1%; overflow: hidden; clear: both; }
 .post .title { padding-bottom: 5px; border-bottom: 3px solid #193441; font-size: 1.5em; }
 .post .meta { margin-top: 5px; padding-left: 10px; border-left: 1px dotted #193441; float: right; width: 25%; }
 .post .content { float: left; width: 70%; }
