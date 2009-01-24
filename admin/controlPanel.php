@@ -1,12 +1,12 @@
 <?php 
 class ControlPanel {
 	var $default_settings = Array(
-		'categories_is_link' => 1,
-		'tags_is_link' => 1,
-		'pages_is_link' => 1,
-		'archives_is_link' => 1,
+		'categories_is_link' => 0,
+		'tags_is_link' => 0,
+		'pages_is_link' => 0,
+		'archives_is_link' => 0,
 		'owner_id' => 0,
-		'include_sifr' => 1,
+		'include_sifr' => 0,
 		'sifr_alternate_path' => '',
 		'hdjs_laternate_path' => '',
 		'additional_head' => ''
