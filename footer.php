@@ -16,7 +16,6 @@
 		<?php if (isset($themeOptions["hdjs_alternate_path"]) && $themeOptions["hdjs_alternate_path"] != '') : ?>
 			<script src="<?php echo $themeOptions["hdjs_alternate_path"]; ?>" type="text/javascript"></script>
 		<?php else : ?>
-			<script src="<?php bloginfo('template_directory'); ?>/js/mootools.js" type="text/javascript"></script>
 			<script src="<?php bloginfo('template_directory'); ?>/js/hd.js" type="text/javascript"></script>
 		<?php endif; ?>
 	</body>
