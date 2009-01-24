@@ -52,7 +52,7 @@ div.wrap { padding: 0 3.5%; }
 #body { clear: left; }
 .posts { padding: 0; }
 .sidebar { padding: 1em 3.5% 0; color: #193441; border-top: 3px solid #D1DBBD; }
-#footer { clear: both; text-align: center; padding: 0.7em 0 0.5em; }
+#footer { clear: both; padding: 0.7em 0 0.5em; font-size: 0.7em; text-align: center; }
 #footer p { margin: 0; }
 #footer a { color: #193441; }
 /* Wordpress Generated Classes */
@@ -67,7 +67,7 @@ div.wrap { padding: 0 3.5%; }
 #header .description { font-size: 1.2em; color: #193441; line-height: 1em; float: left; padding: 0.5em 0 0; margin: 0; }
 /* Nav Styles */
 #nav { clear: left; padding: 0.5em 0 0; position: relative; }
-#nav .parent { float: left; padding: 0 0.5em 0 0.5em; border: solid #fff; border-width: 1px 0 0; }
+#nav .parent { float: left; padding: 0 0.5em 0 0.5em; border: solid #fff; border-width: 1px 0 0; cursor: default; }
 #nav .parent:hover, #nav .hovered { border-color: #D1DBBD; }
 #nav .parent:active, #nav .active { border: solid #D1DBBD; border-width: 0 0 1px; }
 #nav .parent:hover .child, #nav .hovered .child { left: auto; }
