@@ -1,11 +1,7 @@
 if (Browser.Engine.trident4) {
 	$$('.hoverable').addEvents({
-		'mouseenter': function(e) {
-			this.addClass('hovered');
-		},
-		'mouseleave': function(e) {
-			this.removeClass('hovered');
-		}
+		'mouseenter': function(e) { this.addClass('hovered'); },
+		'mouseleave': function(e) { this.removeClass('hovered'); }
 	});
 }
 
