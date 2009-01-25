@@ -1,6 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"> <!-- ends in footer.php -->
 	<head>
+		<?php
+			$themeOptions = get_option('Horizontally Delicious');
+		?>
 		<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 		<meta name="generator" content="WordPress <?php bloginfo('version'); ?>" /> <!-- leave this for stats please -->
 		<?php if (is_home() || is_archive()) : ?>
@@ -18,7 +21,6 @@
 		<?php endif; ?>
 		<?php 
 			wp_get_archives('type=monthly&format=link');
-			$themeOptions = get_option('Horizontally Delicious');
 			echo stripslashes($themeOptions["additional_head"]);
 		?>
 	</head>
