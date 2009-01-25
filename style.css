@@ -35,10 +35,10 @@ h5 { font-size: 1.1em; }
 h6 { font-size: 1em; }
 a { color: #3E606F; text-decoration: none; }
 a:hover { text-decoration: underline; }
-p { display: inline-block; margin: 0.5em 0; } /* clear after p tags in case images are floated in it */
+p { display: inline-block; margin: 0.5em 0; }
 p:after { content: '.'; display: block; height: 0px; visibility: hidden; overflow: hidden; clear: both; }
 * html p { height: 1%; }
-p { display: block; } /* end clear after p tags */
+p { display: block; }
 sup { line-height: 0; }
 code { font-size: 0.9em; font-family: Courier, serif; }
 blockquote { padding: 0.5em; margin: 0 0.35em; position: relative; background: #eee url(img/quote.png) 9px 5px no-repeat; text-indent: 36px; }
@@ -48,7 +48,7 @@ input, textarea { padding: 0.2em 0 0.2em 0.2em; border: 1px solid #193441; }
 button { border: 1px solid #193441; background: #a1beb1; }
 .clearfix { display: inline-block; }
 * html .clearfix { height: 1%; }
-.clearfix { display: block; } /* have to reset to block for IE7 clearfix and so FF3 doesn't actually use inline-block */
+.clearfix { display: block; }
 .clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; } 
 /* Main Layout Pieces */
 div.wrap { padding: 0 3.5%; }
@@ -77,7 +77,7 @@ div.wrap { padding: 0 3.5%; }
 #nav .parent:active, #nav .active { border: solid #D1DBBD; border-width: 0 0 1px; }
 #nav .parent a, #nav .parent span { display: block; }
 #nav .child { position: absolute; left: -15000px; z-index: 5; border: 1px solid #D1DBBD; padding: 0 0.5em; width: 10em; line-height: 1.6; background: #fff; box-shadow: 5px 5px 15px #9c9977; -moz-box-shadow: 5px 5px 15px #9c9977; -webkit-box-shadow: 5px 5px 15px #9c9977; }
-html > body #nav .child { min-width: 10em; width: auto; } /* --- CSS HACK --- Added because of IE6's lack of min-width support */
+html > body #nav .child { min-width: 10em; width: auto; }
 #nav .parent:hover .child, #nav .hovered .child { left: auto; }
 #nav .child li { padding: 0; border-bottom: 1px solid #CCC; }
 #nav .child li:last-child { border-bottom-width: 0; }
@@ -88,7 +88,7 @@ html > body #nav .child { min-width: 10em; width: auto; } /* --- CSS HACK --- Ad
 #body .navigation:first-child { display: none; }
 /* Common Post Content Styles */
 .navigation { min-height: 1em; }
-.post, .fourOhFour { padding: 7px 0 7px 0; position: relative; }
+.post, .fourOhFour { padding: 7px 0 7px 0; }
 .post .title { padding-bottom: 5px; border-bottom: 3px solid #193441; font-size: 1.5em; }
 .post .meta { float: right; margin-top: 5px; padding-left: 10px; border-left: 1px dotted #193441; width: 25%; }
 .post .content { float: left; width: 70%; }
