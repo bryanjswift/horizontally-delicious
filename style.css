@@ -42,6 +42,7 @@ p { display: block; }
 sup { line-height: 0; }
 code { font-size: 0.9em; font-family: Courier, serif; }
 blockquote { padding: 0.5em; margin: 0 0.35em; position: relative; background: #eee url(img/quote.png) 9px 5px no-repeat; text-indent: 36px; }
+* html blockquote { background-image: none; text-indent: 0px; }
 blockquote p:first-line { font-variant: small-caps; }
 pre { font-family: Courier, serif; font-size: 0.9em; margin: 0 0.5em; }
 input, textarea { padding: 0.2em 0 0.2em 0.2em; border: 1px solid #193441; }
