@@ -94,7 +94,9 @@ html > body #nav .child { min-width: 10em; width: auto; }
 .post .content { float: left; width: 70%; }
 .post .content a { color: #9c9977; }
 .post ol { list-style: decimal-leading-zero outside; }
+* html .post ol { list-style-type: decimal; }
 .post ol li { list-style: decimal-leading-zero outside; margin: 0 0 0 30px; }
+* html .post ol li { list-style-type: decimal; }
 .post ul { list-style: square outside; padding: 0 0 0 15px; }
 .post ul li { list-style: square outside; }
 .post .footnotes, .post .footnotes li { list-style-type: decimal; font-size: 0.85em; font-style: italic; }
