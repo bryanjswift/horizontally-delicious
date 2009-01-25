@@ -82,6 +82,7 @@ html > body #nav .child { min-width: 10em; width: auto; }
 #nav .parent:hover .child, #nav .hovered .child { left: auto; }
 #nav .child li { padding: 0; border-bottom: 1px solid #CCC; }
 #nav .child li:last-child { border-bottom-width: 0; }
+#nav .child a, #nav .child span { display: inline; }
 #nav .child ul { padding-left: 0.5em; }
 #nav .child ul li { border-bottom-width: 0; }
 /* Body Styles */
