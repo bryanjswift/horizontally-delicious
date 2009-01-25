@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div id="content" class="posts singlePost">
+<div id="content" class="posts singlePost clearfix">
 	<?php if (have_posts()) : ?> <!-- if there are posts then loop over them, should only be one post -->
 		<?php while (have_posts()) : the_post(); ?>
 			<div class="post" id="post-<?php the_ID(); ?>">
