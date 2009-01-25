@@ -3,6 +3,9 @@
 		<h2 class="title">
 			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark"><?php the_title(); ?></a>
 		</h2>
+		<div class="content">
+			<?php the_content("Catch the rest &raquo;"); ?>
+		</div>
 		<div class="meta">
 			<p class="date"><?php the_time('F j, Y'); ?></p>
 			<p class="byline">
@@ -19,10 +22,6 @@
 				<?php comments_popup_link(__('No Reaction'), __('One Reaction'), __('% Reactions')); ?>
 			</div>
 		</div>
-		<div class="content">
-			<?php the_content("Catch the rest &raquo;"); ?>
-		</div>
-		
 	</div>
 <?php endwhile; ?>
 <div class="navigation">
