@@ -128,3 +128,4 @@ ol#commentlist li { padding: 5px; margin: 0; list-style-position: inside; }
 /* Search Styles */
 .s { margin-right: 0.5em; }
 .searchform button { position: relative; top: 1px; padding: 0 0.2em; height: 1.8em; }
+* html .searchform button { top: 0px; }
