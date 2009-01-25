@@ -72,7 +72,7 @@ div.wrap { padding: 0 3.5%; }
 #header .description { float: left; padding: 0.5em 0; margin: 0; font-size: 1.2em; color: #193441; line-height: 1em; }
 /* Nav Styles */
 #nav { clear: left; position: relative; padding: 0.5em 0 0; }
-* html #nav { padding: 0 0 0.5em; }
+* html #nav { padding: 0; }
 #nav .parent { float: left; padding: 0 0.5em 0 0.5em; border: solid #fff; border-width: 1px 0 0; cursor: default; }
 #nav .parent:hover, #nav .hovered { border-color: #D1DBBD; }
 #nav .parent:active, #nav .active { border: solid #D1DBBD; border-width: 0 0 1px; }
