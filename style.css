@@ -62,7 +62,7 @@ div.wrap { padding: 0 3.5%; }
 * html #nav { padding: 0; }
 #nav .parent { float: left; padding: 0 0.5em 0 0.5em; border: solid #fff; border-width: 1px 0 0; cursor: default; }
 #nav .parent:hover, #nav .hovered { border-color: #D1DBBD; }
-#nav .parent:active, #nav .active { border: solid #D1DBBD; border-width: 0 0 1px; }
+#nav .parent:active, #nav .active { border-color: #3E606F; }
 #nav .parent a, #nav .parent span { display: block; }
 #nav .child { position: absolute; left: -15000px; z-index: 5; border: 1px solid #D1DBBD; padding: 0 0.5em; width: 10em; line-height: 1.6; background: #fff; box-shadow: 5px 5px 15px #9c9977; -moz-box-shadow: 5px 5px 15px #9c9977; -webkit-box-shadow: 5px 5px 15px #9c9977; }
 html > body #nav .child { min-width: 10em; width: auto; }
