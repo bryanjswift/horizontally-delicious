@@ -68,7 +68,7 @@ div.wrap { padding: 0 3.5%; }
 /* Header Styles */
 #header .title { float: left; margin: 0; padding: 0 1em 0 0; }
 #header .title a { color: #193441; }
-#header .description { float: left; padding: 0.5em 0 0; margin: 0; font-size: 1.2em; color: #193441; line-height: 1em; }
+#header .description { float: left; padding: 0.5em 0; margin: 0; font-size: 1.2em; color: #193441; line-height: 1em; }
 /* Nav Styles */
 #nav { clear: left; position: relative; padding: 0.5em 0 0; }
 * html #nav { padding: 0 0 0.5em; }

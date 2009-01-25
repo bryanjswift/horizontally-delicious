@@ -8,7 +8,7 @@
 			},
 			leave: function(e) {
 				var el = e.srcElement;
-				if (el.className.match(/hovered/)) { el.className = el.className.replace(/hovered/,''); }
+				if (el.className.match(/hovered/)) { el.className = el.className.replace(/ hovered/,''); }
 			},
 			setupEvents: function() {
 				var navParents = document.getElementById('nav').childNodes;
