@@ -1,7 +1,7 @@
 (function() {
-	var events;
-	if (window.ActiveXObject && !window.XMLHttpRequest) {
-		events = {
+	var hd;
+	if (window.ActiveXObject) {
+		hd = {
 			enter: function(e) {
 				var el = e.srcElement;
 				if (!el.className.match(/hovered/)) { el.className = el.className + ' hovered'; }
@@ -19,14 +19,29 @@
 					i = i - 1;
 					par = navParents[i];
 					if (!par.attachEvent) { continue; }
-					par.attachEvent('onmouseenter',events.enter);
-					par.attachEvent('onmouseleave',events.leave);
+					par.attachEvent('onmouseenter',hd.enter);
+					par.attachEvent('onmouseleave',hd.leave);
 				} while (i);
 				navParents = null;
 				par = null;
+			},
+			supportLastChild: function(el) {
+				var nodes = el.childNodes;
+				var i = nodes.length;
+				if (!i) { return; }
+				var lastFound = false;
+				var node;
+				do {
+					i = i - 1;
+					node = nodes[i];
+					if (node.nodeType !== 1) { continue; }
+					if (!lastFound) { node.className = node.className + ' last-child'; lastFound = true; }
+					hd.supportLastChild(node);
+				} while(i);
 			}
 		};
-		events.setupEvents();
+		if (!window.XMLHttpRequest) { hd.setupEvents(); }
+		hd.supportLastChild(document.getElementById('nav'));
 	}
 })();
 
