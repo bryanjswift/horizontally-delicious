@@ -27,8 +27,10 @@
 	<?php flush(); ?>
 	<body> <!-- ends in footer.php -->
 		<div id="header" class="wrap">
-			<h1 class="title"><a href="<?php bloginfo('url'); ?>/"><?php bloginfo('name'); ?></a></h1>
-			<p class="description"><?php bloginfo('description'); ?></p>
+			<div id="blogTitle">
+				<h1 class="title"><a href="<?php bloginfo('url'); ?>/"><?php bloginfo('name'); ?></a></h1>
+				<p class="description"><?php bloginfo('description'); ?></p>
+			</div>
 			<ul id="nav" class="clearfix">
 				<li class="parent hoverable categories">
 					<?php if ($themeOptions["categories_is_link"] == 1) : ?><a href="<?php bloginfo('url'); ?>/categories/" title="Categories"><?php else : echo "<span>"; endif; _e('Categories'); ?><?php if ($themeOptions["categories_is_link"] == 1) : ?></a><?php else: echo "</span>"; endif; ?>
