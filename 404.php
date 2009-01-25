@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div id="content" class="fourOhFour">
+<div id="content" class="fourOhFour clearfix">
 	<h2 class="header"><?php _e("404 - We can't find what you're looking for"); ?></h2>
 	<h3 class="title"><?php _e('In fact you look a little lost.'); ?></h3>
 	<p><?php _e("Let's see if we can't get you back on track"); ?></p>
@@ -26,5 +26,5 @@
 			<?php wp_get_archives('type=monthly&show_post_count=1'); ?>
 		</ul>
 	</div>
-</div> <!-- end of div.posts -->
+</div>
 <?php get_footer(); ?>
