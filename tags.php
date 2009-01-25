@@ -4,7 +4,7 @@ Template Name: Tag Archive
 */
 ?>
 <?php get_header(); ?>
-<div id="content" class="posts singlePage">
+<div id="content" class="posts singlePage clearfix">
 	<div class="page post">
 		<h2 class="title"><?php _e("Tags"); ?></h2>
 		<div class="content">

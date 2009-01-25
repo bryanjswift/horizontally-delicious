@@ -4,7 +4,7 @@ Template Name: Archive Index
 */
 ?>
 <?php get_header(); ?>
-<div id="content" class="posts singlePage">
+<div id="content" class="posts singlePage clearfix">
 	<div class="page post">
 		<?php include (TEMPLATEPATH . '/searchform.php'); ?>
 		<h2 class="title"><?php _e('Archives by Month:'); ?></h2>
