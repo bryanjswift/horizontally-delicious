@@ -1,8 +1,23 @@
-This theme is developed for my personal use, but I have tried to keep things general enough for it to be used by anyone.
+h1. Horizontally Delicious
 
-There are a couple of theme options worth noting.
-* each of the 'tabs' across the top is a link by default the links can be turned off in the options
-* there is an option to enter the author's user id in order to determine whose comments get highlighted
-* there are some text fields to allow for certain resources to be hosted elsewhere
+This Wordpress theme is intentionally stripped down. It uses clean, semantic markup combined with a minimal amount of JavaScript and CSS. Because the structure, style, and behavior are well separated this theme lends itself well to customization. sIFR(Scalable Inline Flash Replacement) is included with this theme though not utilized by default it in included in order to make it easy to implement. In addition to the inclusion of sIFR there are a couple of options intended to ease customization of the theme.
 
-The last is a little bit of an oddity I'll admit, the reason I did it however is so I would be able to use a combine script in order to reduce the number of requests being made.
+h2. Theme Options
+
+Once the theme is installed and active there will be a new item under the Appearance menu in the admin pages called 'HD Settings' which are the theme specific settings.
+
+h3. Header Links
+
+Checking any of the Header Links check boxes will make the nav items (Categories, Tags, Pages, Archives) in the headers links to /categories, /tags, /pages and /archives respectively. For each of these links to work properly a page, Archive Index for example, must be created and the template set. In order to set the template open the attributes section when editing a page and select the appropriate Index from the Template dropdown. The appropriate templates are called Category Index, Tag Index, Pages Index and Archives Index respectively. In order to have these pages not display in the pages menu after they are published their Visibility should be set to Private.
+
+h3. Comment Highlighting
+
+This theme was created prior to Wordpress 2.7 and so in order to highlight author comments the author id to highlight must be entered in the text field in this section. In order to help discover the appropriate author id the id of the currently logged in user is displayed underneath the text field.
+
+h3. Theme Resources
+
+This section contains the option to include sIFR on the page, if the checkbox is not checked sIFR will not be included. In addition to the optional include of sIFR there are also two 'alternate path' fields. These are useful if, for example, it is desirable to serve static resources from a different domain (or subdomain). Doing this also allows for using some sort of resource combining script, such as "combine.php by rakaz":http://rakaz.nl/extra/code/combine or "minify":http://code.google.com/p/minify/, to reduce the number of http requests.
+
+h4. Additional Information
+
+This is a free form section, anything put into this text area will be be included last in the head element of the page. This is a good place to include site wide keywords or description or more custom scripts or CSS.
