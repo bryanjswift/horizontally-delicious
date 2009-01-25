@@ -18,6 +18,10 @@ h3. Theme Resources
 
 This section contains the option to include sIFR on the page, if the checkbox is not checked sIFR will not be included. In addition to the optional include of sIFR there are also two 'alternate path' fields. These are useful if, for example, it is desirable to serve static resources from a different domain (or subdomain). Doing this also allows for using some sort of resource combining script, such as "combine.php by rakaz":http://rakaz.nl/extra/code/combine or "minify":http://code.google.com/p/minify/, to reduce the number of http requests.
 
-h4. Additional Information
+h3. Additional Information
 
 This is a free form section, anything put into this text area will be be included last in the head element of the page. This is a good place to include site wide keywords or description or more custom scripts or CSS.
+
+h2. Sidebar
+
+This theme is widget ready and has one sidebar. The sidebar is displayed at the bottom of the page as part of the footer.
