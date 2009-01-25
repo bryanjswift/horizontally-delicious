@@ -31,23 +31,23 @@
 			<p class="description"><?php bloginfo('description'); ?></p>
 			<ul id="nav" class="clearfix">
 				<li class="parent hoverable categories">
-					<?php if ($themeOptions["categories_is_link"] == 1) : ?><a href="<?php bloginfo('url'); ?>/categories/" title="Categories"><?php endif; _e('Categories'); ?><?php if ($themeOptions["categories_is_link"] == 1) : ?></a><?php endif; ?>
+					<?php if ($themeOptions["categories_is_link"] == 1) : ?><a href="<?php bloginfo('url'); ?>/categories/" title="Categories"><?php else : echo "<span>"; endif; _e('Categories'); ?><?php if ($themeOptions["categories_is_link"] == 1) : ?></a><?php else: echo "</span>"; endif; ?>
 					<ul class="child">
 						<?php wp_list_categories('title_li=0&show_count=1'); ?>
 					</ul>
 				</li>
 				<li class="parent hoverable tags">
-					<?php if ($themeOptions["tags_is_link"] == 1) : ?><a href="<?php bloginfo('url'); ?>/tags/" title="Tags"><?php endif; _e('Tags'); ?><?php if ($themeOptions["tags_is_link"] == 1) : ?></a><?php endif; ?>
+					<?php if ($themeOptions["tags_is_link"] == 1) : ?><a href="<?php bloginfo('url'); ?>/tags/" title="Tags"><?php else : echo "<span>"; endif; _e('Tags'); ?><?php if ($themeOptions["tags_is_link"] == 1) : ?></a><?php else : echo "</span>"; endif; ?>
 					<?php bjs_wp_tag_cloud('unit=em&smallest=1&largest=1.01&format=list'); ?>
 				</li>
 				<li class="parent hoverable pages">
-					<?php if ($themeOptions["pages_is_link"] == 1) : ?><a href="<?php bloginfo('url'); ?>/pages/" title="Pages"><?php endif; _e('Pages'); ?><?php if ($themeOptions["pages_is_link"] == 1) : ?></a><?php endif; ?>
+					<?php if ($themeOptions["pages_is_link"] == 1) : ?><a href="<?php bloginfo('url'); ?>/pages/" title="Pages"><?php else : echo "<span>"; endif; _e('Pages'); ?><?php if ($themeOptions["pages_is_link"] == 1) : ?></a><?php else : echo "</span>"; endif; ?>
 					<ul class="child">
 						<?php wp_list_pages('title_li=0&sort_column=post_date'); ?>
 					</ul>
 				</li>
 				<li class="parent hoverable archives">
-					<?php if ($themeOptions["archives_is_link"] == 1) : ?><a href="<?php bloginfo('url'); ?>/archives/" title="Archives"><?php endif; _e('Archives'); ?><?php if ($themeOptions["archives_is_link"] == 1) : ?></a><?php endif; ?>
+					<?php if ($themeOptions["archives_is_link"] == 1) : ?><a href="<?php bloginfo('url'); ?>/archives/" title="Archives"><?php else : echo "<span>"; endif; _e('Archives'); ?><?php if ($themeOptions["archives_is_link"] == 1) : ?></a><?php else : echo "</span>"; endif; ?>
 					<ul class="child">
 						<?php wp_get_archives('type=monthly&show_post_count=1'); ?>
 					</ul>
